@@ -8,7 +8,10 @@ public class App {
         ArrayList<BrokenDevice> arr2 = new ArrayList<>();
         Service s = new Service(arr1, arr2);
         Scanner scan = new Scanner(System.in);
-        s.AddDevice(scan);
+        for (int i = 0; i < 3; i++) {
+            s.AddDevice(scan);
+
+        }
         // for (Device d : arr1) {
         // System.out.println(d);
         // }
@@ -17,7 +20,19 @@ public class App {
         for (Device d : arr1) {
             System.out.println(d);
         }
-        System.out.println(arr1);
-        System.out.println(arr2);
+        // System.out.println("Arr1 Working devices");
+        // System.out.println(arr1);
+        // System.out.println("Arr2 Broken Devices");
+        // System.out.println(arr2);
+
+        // System.out.println("Arr1 Working devices");
+        // System.out.println(arr1);
+        // System.out.println("Arr2 Broken Devices");
+        // System.out.println(arr2);
+
+        // float p = s.Price(arr1, arr2);
+        // System.out.println(p);
+
+        s.SameSymptoms(arr2.get(0), arr2.get(1));
     }
 }
